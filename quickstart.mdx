@@ -1,0 +1,143 @@
+---
+title: Getting Started with Anil Kumar
+description: Learn how to set up your account and create your first documentation project in minutes.
+---
+
+## Prerequisites
+
+Before you begin, ensure you have the following:
+
+<Callout kind="info">
+
+- A modern web browser like Chrome, Firefox, or Safari
+- An email address for account verification
+- Optional: GitHub account for version control integration
+
+</Callout>
+
+## Create Your Account
+
+Sign up in under 2 minutes. Follow these steps to get started.
+
+<Steps>
+  <Step title="Visit the Dashboard" icon="monitor">
+    Navigate to `https://dashboard.example.com` and click **Sign Up**.
+  </Step>
+  <Step title="Enter Your Details" icon="user">
+    Provide your email, create a strong password, and complete the CAPTCHA.
+  </Step>
+  <Step title="Verify Email" icon="mail">
+    Check your inbox for a verification link from `no-reply@example.com` and click it.
+  </Step>
+  <Step title="Complete Onboarding" icon="check-circle">
+    Answer a few quick questions about your project needs and select your workspace preferences.
+  </Step>
+</Steps>
+
+## Set Up Your Initial Workspace
+
+Customize your workspace to match your workflow.
+
+<Tabs>
+  <Tab title="Web Browser" icon="globe">
+    After login, select **New Workspace** from the sidebar.
+    
+    Configure basic settings:
+    
+````json
+{
+  "name": "My First Docs",
+  "theme": "light",
+  "features": ["mdx-support", "version-control"]
+}
+````
+    
+    Click **Create Workspace**.
+  </Tab>
+  <Tab title="Desktop App" icon="monitor">
+    Download the app from `https://dashboard.example.com/download`.
+    
+    Launch and log in. Create workspace via the welcome screen.
+    
+    <Callout kind="tip">
+      Sync your workspace across devices automatically.
+    </Callout>
+  </Tab>
+</Tabs>
+
+## Create Your First Project
+
+Build a documentation project with a simple MDX page.
+
+<Steps>
+  <Step title="Add New Project" icon="plus">
+    In your workspace, click **New Project** and name it `Quickstart Docs`.
+  </Step>
+  <Step title="Create First Page" icon="file-text">
+    Select **MDX Page** template. Name it `introduction.mdx`.
+  </Step>
+  <Step title="Add Content" icon="edit-3">
+    Paste this starter MDX:
+    
+    <CodeGroup tabs="MDX,Bash">
+```mdx
+---
+title: Welcome
+description: Your first page.
+---
+
+## Hello World
+
+This is your documentation!
+```
+
+```bash
+# Preview locally
+npm run dev
+```
+    </CodeGroup>
+  </Step>
+  <Step title="Publish" icon="upload">
+    Click **Publish** to generate a live URL like `https://docs.example.com/quickstart/introduction`.
+  </Step>
+</Steps>
+
+## Interface Tour
+
+Explore the main sections of the Anil Kumar interface.
+
+<Columns cols={3}>
+  <Card title="Editor" icon="edit-3" href="#editor">
+    Real-time MDX editor with live preview, syntax highlighting, and auto-save.
+  </Card>
+  <Card title="Sidebar" icon="sidebar" href="#sidebar">
+    Navigate workspaces, projects, pages, and settings quickly.
+  </Card>
+  <Card title="Preview" icon="eye" href="#preview">
+    Split-pane preview updates as you type. Toggle themes instantly.
+  </Card>
+</Columns>
+
+<Expandable title="Advanced Features" default-open="false">
+
+Use version control integration:
+
+```bash
+git init
+git remote add origin https://github.com/yourusername/quickstart-docs.git
+git add .
+git commit -m "Initial docs"
+git push -u origin main
+```
+
+</Expandable>
+
+## Next Steps
+
+Congratulations! You've created your first project.
+
+<Callout kind="tip">
+
+Explore more in [Introduction](/introduction), [Authentication](/authentication), or [Changelog](/changelog). Customize themes with brand color `#3B82F6`.
+
+</Callout>

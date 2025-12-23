@@ -1,0 +1,138 @@
+---
+title: Changelog
+description: Review the version history, recent updates, and improvements to Anil Kumar's documentation platform.
+---
+
+## Recent Releases
+
+<Callout kind="info">
+  You receive automatic notifications for major releases. Check your dashboard at `https://dashboard.example.com` for upgrade instructions.
+</Callout>
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added support for custom brand colors, like `#3B82F6` for your projects
+- Introduced real-time collaboration editing for documentation pages
+- New Mermaid diagram rendering with enhanced syntax support
+
+## Improvements
+
+- Optimized page load times by `>30%`
+- Better mobile responsiveness for all components
+
+## Bug Fixes
+
+- Fixed parsing errors with nested code blocks
+- Resolved issues with special character escaping in prose
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Integrated `Tabs` and `CodeGroup` components for multi-language examples
+- Added `ParamField` and `ResponseField` for API documentation
+
+## Bug Fixes
+
+- Corrected JSX attribute parsing for double-quoted strings
+- Fixed heading hierarchy enforcement starting from H2
+
+<CodeGroup tabs="Before,After">
+````javascript
+// Before (incorrect)
+const config = {apiKey: 'value'};
+
+// After (fixed escaping)
+const config = `{apiKey: 'YOUR_API_KEY'}`;
+````
+````javascript
+// Usage example
+<Callout kind="info">
+  Use `YOUR_API_KEY` here.
+</Callout>
+````
+</CodeGroup>
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["breaking", "feature"]}>
+
+## New Features
+
+- Launched core MDX documentation engine with 15+ components
+- Full support for YAML frontmatter and H2-first heading structure
+- Introduced `Steps`, `Cards`, and `Columns` for interactive guides
+
+## Breaking Changes
+
+- Removed H1 support; all pages now require frontmatter titles
+- Enforced strict escaping for `{`, `}`, `<`, `>` in text
+
+</Update>
+
+## Upcoming Roadmap
+
+<Columns cols={3}>
+  <Card title="v1.3.0" icon="zap" href="#">
+    AI-powered content generation and auto-summaries.
+  </Card>
+  <Card title="v1.4.0" icon="shield" href="#">
+    Advanced security features and secret scanning.
+  </Card>
+  <Card title="v2.0.0" icon="rocket" href="#">
+    Full customization API and plugin ecosystem.
+  </Card>
+</Columns>
+
+## Upgrade Process
+
+Follow these steps to upgrade your Anil Kumar documentation instance:
+
+<Steps>
+  <Step title="Backup" icon="database">
+    Export your current site configuration.
+
+    ```bash
+    npx anilkumar-docs export --backup
+    ```
+  </Step>
+  <Step title="Update" icon="download">
+    Run the upgrade command with the latest version.
+
+    ```bash
+    npx anilkumar-docs upgrade v1.2.0
+    ```
+  </Step>
+  <Step title="Verify" icon="check-circle">
+    Test your pages for parsing errors.
+
+    <Callout kind="tip">
+      Scan for unescaped `{` or `<` characters.
+    </Callout>
+  </Step>
+</Steps>
+
+## Detailed Release Notes
+
+<ExpandableGroup>
+  <Expandable title="Migration Guide for v1.2.0" default-open="true">
+
+    Review changes to component syntax:
+
+    | Component | Old Syntax | New Syntax |
+    |-----------|------------|------------|
+    | Callout   | `kind=info` | `kind="info"` |
+    | Card      | Self-closing | Must have content |
+    | Mermaid   | `<Mermaid>` | ````mermaid code block```` |
+
+  </Expandable>
+  <Expandable title="Full v1.1.0 Commit History">
+
+    Over 50 commits including parsing fixes and component enhancements. View on GitHub.
+
+  </Expandable>
+</ExpandableGroup>
